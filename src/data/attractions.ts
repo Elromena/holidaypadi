@@ -65,7 +65,7 @@ export const attractions: Attraction[] = [
     image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945',
     type: 'full_package',
     destinationId: 'lagos',
-    price: 2500,
+    price: 300,
     accommodation: {
       roomImages: [
         'https://images.unsplash.com/photo-1618773928121-c32242e63f39',
