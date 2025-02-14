@@ -7,6 +7,12 @@ export const destinations: Destination[] = [
     description: 'Experience the vibrant energy of Nigeria\'s largest city, with beautiful beaches and amazing nightlife.',
     image: 'https://images.unsplash.com/photo-1589308454676-22a0e7e1f58f'
   },
+   {
+    id: 'warri',
+    name: 'Warri',
+    description: 'Enjoy the warmth of banga rice and stock fish in Nigeria\'s hottest city.',
+    image: 'https://i.pinimg.com/1200x/40/50/22/405022059a823ec23043d26c52d57746.jpg'
+  },
   {
     id: 'abuja',
     name: 'Abuja',
