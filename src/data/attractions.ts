@@ -1,6 +1,16 @@
 import { Attraction } from '../types';
 
 export const attractions: Attraction[] = [
+ // Warri Regular Attractions
+  {
+    id: 'mcarthy-resort',
+    name: 'McArthy Resort',
+    description: 'Experience Africa\'s longest canopy walkway and observe diverse wildlife in their natural habitat.',
+    image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+    type: 'regular',
+    destinationId: 'warri',
+    price: 2000
+  },
   // Lagos Regular Attractions
   {
     id: 'lekki-conservation-centre',
