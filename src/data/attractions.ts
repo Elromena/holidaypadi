@@ -24,7 +24,7 @@ price: 3000
 id: 'magnus-paintball',
 name: 'Magnus Paintball',
 description: 'Get your adrenaline pumping in exciting paintball battles with friends.',
-image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+image: 'https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1a/56/2f/f1/ready-for-some-paintball.jpg?w=900&h=500&s=1',
 type: 'regular',
 destinationId: 'ibadan',
 price: 4000
