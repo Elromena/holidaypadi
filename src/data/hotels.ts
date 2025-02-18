@@ -6,13 +6,13 @@ export const hotels: Hotel[] = [
     id: 'bon-nest',
     name: 'Bon Hotel Nest',
     description: 'Premier 4-star hotel in the heart of Ibadan.',
-    image: 'https://images.unsplash.com/photo-1551882547-ff40c63fe5fa',
+    image: 'https://bonhotels.com/wp-content/uploads/2022/10/nest-bodija-ibadan-main.jpg',
     roomImages: [
-      'https://images.unsplash.com/photo-1595576508898-0ad5c879a061',
-      'https://images.unsplash.com/photo-1611892440504-42a792e24d32',
-      'https://images.unsplash.com/photo-1587985064135-0366536eab42'
+      'https://bonhotels.com/wp-content/uploads/2022/10/lekki-standard-room-images-3.png',
+      'https://bonhotels.com/wp-content/uploads/2022/10/lekki-standard-room-images-1.png',
+      'https://bonhotels.com/wp-content/uploads/2022/10/lekki-standard-room-images-2.png'
     ],
-    price: 75000,
+    price: 100000,
     destinationId: 'abuja',
     features: ['Premium Dining', 'Wifi', 'Gym', 'Pool', 'Bar'],
     rating: 4.7
