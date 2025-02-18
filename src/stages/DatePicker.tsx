@@ -28,7 +28,7 @@ export function DatePicker({ selectedDestination, dateRange, onDateSelect, onBac
         </p>
         <div className="text-sm text-gray-400 flex flex-col items-center gap-2 px-4">
           <p>• Trips must be booked at least one week in advance</p>
-          <p>• Minimum stay is 3 days</p>
+          <p>• Minimum stay is 2 days</p>
         </div>
       </div>
 
