@@ -13,7 +13,7 @@ export const hotels: Hotel[] = [
       'https://bonhotels.com/wp-content/uploads/2022/10/lekki-standard-room-images-2.png'
     ],
     price: 100000,
-    destinationId: 'abuja',
+    destinationId: 'ibadan',
     features: ['Premium Dining', 'Wifi', 'Gym', 'Pool', 'Bar'],
     rating: 4.7
   },
