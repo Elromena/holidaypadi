@@ -14,7 +14,7 @@ export const hotels: Hotel[] = [
     ],
     price: 100000,
     destinationId: 'ibadan',
-    features: ['Premium Dining', 'Wifi', 'Gym', 'Pool', 'Bar'],
+    features: ['Complementary breakfast', 'Wifi', 'Gym', 'Pool', 'Bar'],
     rating: 4.7
   },
   // Lagos Hotels
