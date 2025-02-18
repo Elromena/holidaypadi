@@ -19,8 +19,8 @@ export function DateRangePicker({ value, onDateSelect }: DateRangePickerProps) {
     if (range?.from && range?.to) {
       // Check minimum trip duration
       const duration = differenceInDays(range.to, range.from);
-      if (duration < 3) {
-        setError('Trips must be at least 3 days long');
+      if (duration < 7) {
+        setError('Trips must be at least 2 days long');
         return;
       } else {
         onDateSelect(range);
