@@ -1,6 +1,61 @@
 import { Attraction } from '../types';
 
 export const attractions: Attraction[] = [
+  // Ibadan Regular Attractions
+{
+id: 'horse-riding-agodi',
+name: 'Horse Riding at Agodi',
+description: 'Ride through beautiful garden trails on friendly horses with expert guides.',
+image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+type: 'regular',
+destinationId: 'ibadan',
+price: 5000
+},
+{
+id: 'archery-agodi',
+name: 'Archery at Agodi',
+description: 'Have fun learning to shoot arrows like a pro at this exciting archery range.',
+image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+type: 'regular',
+destinationId: 'ibadan',
+price: 3000
+},
+{
+id: 'magnus-paintball',
+name: 'Magnus Paintball',
+description: 'Get your adrenaline pumping in exciting paintball battles with friends.',
+image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+type: 'regular',
+destinationId: 'ibadan',
+price: 4000
+},
+{
+id: 'sip-paint-agodi',
+name: 'Sip & Paint at Agodi',
+description: 'Mix fun with creativity as you paint and enjoy drinks with friends.',
+image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+type: 'regular',
+destinationId: 'ibadan',
+price: 3500
+},
+{
+id: 'agodi-water-park',
+name: 'Agodi Water Park',
+description: 'Splash, slide and swim in this exciting water park perfect for hot days.',
+image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+type: 'regular',
+destinationId: 'ibadan',
+price: 2500
+},
+{
+id: 'maquza-vr',
+name: 'Maquza VR',
+description: 'Jump into amazing virtual worlds with fun VR games and adventures.',
+image: 'https://images.unsplash.com/photo-1469474968028-56623f02e42e',
+type: 'regular',
+destinationId: 'ibadan',
+price: 3000
+},
  // Warri Regular Attractions
   {
     id: 'mcarthy-resort',
