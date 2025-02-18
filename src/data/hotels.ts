@@ -17,21 +17,6 @@ export const hotels: Hotel[] = [
     features: ['Complementary breakfast', 'Wifi', 'Gym', 'Pool', 'Bar'],
     rating: 4.7
   },
-  {
-    id: 'self-ibadan',
-    name: 'I\'ll handle my accommodation',
-    description: 'Premier 4-star hotel in the heart of Ibadan.',
-    image: 'https://bonhotels.com/wp-content/uploads/2022/10/nest-bodija-ibadan-main.jpg',
-    roomImages: [
-      'https://bonhotels.com/wp-content/uploads/2022/10/lekki-standard-room-images-3.png',
-      'https://bonhotels.com/wp-content/uploads/2022/10/lekki-standard-room-images-1.png',
-      'https://bonhotels.com/wp-content/uploads/2022/10/lekki-standard-room-images-2.png'
-    ],
-    price: 100000,
-    destinationId: 'ibadan',
-    features: ['Complementary breakfast', 'Wifi', 'Gym', 'Pool', 'Bar'],
-    rating: 4.7
-  },
 {
 id: 'self-ibadan',
 name: 'I\'ll handle my accommodation',
@@ -40,7 +25,7 @@ image: 'https://cf.bstatic.com/static/img/theme-index/bg_placestostay/723e0fca72
 roomImages: [],
 price: 0,
 destinationId: 'ibadan',
-features: ['Flexible check-in', 'Choose your location', 'Personal arrangements'],
+features: ['Choose your location', 'Personal arrangements'],
 rating: 5
 },
   // Lagos Hotels
