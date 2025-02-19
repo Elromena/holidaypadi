@@ -83,20 +83,20 @@ type: 'regular',
 destinationId: 'ibadan',
 price: 6000
 },
-  // Calabar Full Package Attractions
+  // Ibadan Full Package Attractions
   {
     id: 'iita-ibadan',
     name: 'IITA Nature Experience',
     description: 'Experience a unique blend of luxury and nature at IITA\'s International House, complete with recreational activities and serene surroundings.',
-    image: 'https://images.unsplash.com/photo-1587974038774-40e60a5f9669',
+    image: 'https://hospitality.iita.org/wp-content/uploads/2024/03/PENISULA-2048x1365.jpg',
     type: 'full_package',
     destinationId: 'ibadan',
-    price: 280000,
+    price: 150000,
     accommodation: {
       roomImages: [
-        'https://images.unsplash.com/photo-1566665797739-1674de7a421a',
-        'https://images.unsplash.com/photo-1571896349842-33c89424de2d',
-        'https://images.unsplash.com/photo-1594560913095-8cf34baf3b0d'
+        'https://nwaanyiije.com/wp-content/uploads/2022/01/E2B79A5F-8097-4373-8B9D-D8D8079D6974-768x432.jpeg',
+        'https://hospitality.iita.org/wp-content/uploads/2019/06/IMG_7880-scaled.jpeg',
+        'https://hospitality.iita.org/wp-content/uploads/elementor/thumbs/DSC_8440-q98c1xodar2tfttmfucswux6iceb3u37qtnsgj3sm8.jpg'
       ],
       amenities: [
       'Complimentary breakfast',
@@ -108,31 +108,61 @@ price: 6000
       'Campus walking trails'
       ],
       activities: [
-        {
-          name: 'Cable Car Rides',
-          description: 'Scenic cable car rides with mountain views',
-          included: true,
-          price: 25000
-        },
-        {
-          name: 'Nature Walks',
-          description: 'Guided walks through mountain trails',
-          included: true,
-          price: 15000
-        },
-        {
-          name: 'Bird Watching',
-          description: 'Early morning bird watching tours',
-          included: true,
-          price: 20000
-        },
-        {
-          name: 'Paragliding',
-          description: 'Tandem paragliding experiences',
-          included: false,
-          price: 45000
-        }
-      ],
+      {
+name: 'Cycling',
+description: 'Explore the beautiful campus grounds on a bicycle',
+included: true,
+price: 6000
+},
+{
+name: 'Forest Walk',
+description: 'Guided nature walk through scenic forest paths',
+included: true,
+price: 8000
+},
+{
+name: 'Fishing',
+description: 'Peaceful fishing experience with equipment provided',
+included: true,
+price: 10000
+},
+{
+name: 'Bird Watching',
+description: 'Observe diverse bird species in their natural habitat',
+included: true,
+price: 10000
+},
+{
+name: 'Gym Session',
+description: 'Access to fully equipped modern gym facilities',
+included: true,
+price: 5000
+},
+{
+name: 'Group Aerobics',
+description: 'Join energetic group fitness sessions',
+included: false,
+price: 0
+},
+{
+name: 'In-Room Massage',
+description: 'Relaxing massage service in your room',
+included: false,
+price: 0
+},
+{
+name: 'Camping',
+description: 'Overnight camping experience in designated areas',
+included: false,
+price: 0
+},
+{
+name: 'Golf Lesson',
+description: 'Professional golf instruction for 9 holes',
+included: false,
+price: 0
+}
+],
       policies: {
         checkIn: '2:00 PM',
         checkOut: '11:00 AM'
