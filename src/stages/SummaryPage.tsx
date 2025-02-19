@@ -34,13 +34,11 @@ export function SummaryPage({
       const attraction = selectedAttractions[0];
       if (!attraction.accommodation) return 0;
 
-      // Calculate accommodation cost with days and party size
       const baseAccommodationPrice = attraction.price * numDays;
       const accommodationTotal = travellerInfo.partySize === 'couple'
         ? baseAccommodationPrice + (baseAccommodationPrice * 0.5)
         : baseAccommodationPrice;
 
-      // Calculate activities cost with only party size
       const activitiesTotal = attraction.accommodation.activities
         .filter(activity => activity.included)
         .reduce((sum, activity) => sum + (activity.price || 0), 0);
@@ -177,16 +175,17 @@ export function SummaryPage({
                     <div className="flex justify-between">
                       <span className="text-gray-600">Base Fee</span>
                       <span className="font-medium text-gray-900">
-                        ₦{(selectedAttractions[0].price * numDays).toLocaleString()}
+                        ₦{(selectedAttractions[0].price * numDays * 
+                           (travellerInfo.partySize === 'couple' ? 1.5 : 1)).toLocaleString()}
                       </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Activities</span>
                       <span className="font-medium text-gray-900">
-                        ₦{selectedAttractions[0].accommodation?.activities
+                        ₦{(selectedAttractions[0].accommodation?.activities
                           .filter(activity => activity.included)
-                          .reduce((sum, activity) => sum + (activity.price || 0), 0)
-                          .toLocaleString()}
+                          .reduce((sum, activity) => sum + (activity.price || 0), 0) * 
+                          (travellerInfo.partySize === 'couple' ? 2 : 1)).toLocaleString()}
                       </span>
                     </div>
                   </div>
@@ -197,7 +196,8 @@ export function SummaryPage({
                     <div className="flex justify-between">
                       <span className="text-gray-600">Attractions Total</span>
                       <span className="font-medium text-gray-900">
-                        ₦{(selectedAttractions.reduce((sum, attr) => sum + attr.price, 0) * (travellerInfo.partySize === 'couple' ? 2 : 1)).toLocaleString()}
+                        ₦{(selectedAttractions.reduce((sum, attr) => sum + attr.price, 0) * 
+                           (travellerInfo.partySize === 'couple' ? 2 : 1)).toLocaleString()}
                       </span>
                     </div>
                     <div className="flex justify-between">
