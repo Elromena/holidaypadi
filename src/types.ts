@@ -14,6 +14,7 @@ interface FullPackageAccommodation {
     name: string;
     description: string;
     included: boolean;
+    price?: number;
   }[];
   policies: {
     checkIn: string;
