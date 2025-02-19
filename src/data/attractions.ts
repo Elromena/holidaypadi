@@ -169,4 +169,6 @@ price: 0
       }
     }
   }
+
+  // add new data before this and always add a comma immediately after the last closed bracket before adding new data
 ];
