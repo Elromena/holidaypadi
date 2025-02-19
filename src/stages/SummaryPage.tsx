@@ -145,7 +145,6 @@ export function SummaryPage({
                         <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2" />
                         <div>
                           <p className="text-gray-600">{attraction.name}</p>
-                          // removed the price per day from here
                         </div>
                       </div>
                     ))}
