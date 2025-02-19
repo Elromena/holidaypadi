@@ -4,7 +4,7 @@ import { MapPin, Calendar, Users, Hotel, Palmtree, CreditCard } from 'lucide-rea
 import type { Attraction, Hotel as HotelType, TravellerInfo } from '../types';
 import { destinations } from '../data/destinations';
 
-const CURATION_FEE = 50000;
+const CURATION_FEE = 100000;
 
 interface SummaryPageProps {
   selectedDestination: string;
@@ -31,10 +31,23 @@ export function SummaryPage({
 
   const calculateTotal = React.useMemo(() => {
     if (isFullPackage) {
-      const basePrice = selectedAttractions[0].price * numDays;
-      const total = travellerInfo.partySize === 'couple'
-        ? basePrice + (basePrice * 0.5)
-        : basePrice;
+      const attraction = selectedAttractions[0];
+      if (!attraction.accommodation) return 0;
+
+      // Calculate accommodation cost with days and party size
+      const baseAccommodationPrice = attraction.price * numDays;
+      const accommodationTotal = travellerInfo.partySize === 'couple'
+        ? baseAccommodationPrice + (baseAccommodationPrice * 0.5)
+        : baseAccommodationPrice;
+
+      // Calculate activities cost with only party size
+      const activitiesTotal = attraction.accommodation.activities
+        .filter(activity => activity.included)
+        .reduce((sum, activity) => sum + (activity.price || 0), 0);
+      
+      const partyMultiplier = travellerInfo.partySize === 'couple' ? 2 : 1;
+      const total = accommodationTotal + (activitiesTotal * partyMultiplier);
+
       return total + CURATION_FEE;
     }
 
@@ -162,21 +175,20 @@ export function SummaryPage({
                 <>
                   <div className="space-y-3">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Package Rate</span>
+                      <span className="text-gray-600">Accommodation</span>
                       <span className="font-medium text-gray-900">
-                        ₦{selectedAttractions[0].price.toLocaleString()}/day
+                        ₦{(selectedAttractions[0].price * numDays).toLocaleString()}
                       </span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Duration</span>
-                      <span className="font-medium text-gray-900">{numDays} days</span>
+                      <span className="text-gray-600">Activities</span>
+                      <span className="font-medium text-gray-900">
+                        ₦{selectedAttractions[0].accommodation?.activities
+                          .filter(activity => activity.included)
+                          .reduce((sum, activity) => sum + (activity.price || 0), 0)
+                          .toLocaleString()}
+                      </span>
                     </div>
-                    {travellerInfo.partySize === 'couple' && (
-                      <div className="flex justify-between">
-                        <span className="text-gray-600">Couple Rate</span>
-                        <span className="font-medium text-gray-900">+50% of base price</span>
-                      </div>
-                    )}
                   </div>
                 </>
               ) : (
