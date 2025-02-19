@@ -100,7 +100,7 @@ price: 6000
       ],
       amenities: [
       'Complimentary breakfast',
-      'Golf course walk,
+      'Golf course walk',
       'Swimming pool',
       'Gym facilities',
       'Tennis courts',
