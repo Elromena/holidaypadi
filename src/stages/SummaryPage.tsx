@@ -175,7 +175,7 @@ export function SummaryPage({
                 <>
                   <div className="space-y-3">
                     <div className="flex justify-between">
-                      <span className="text-gray-600">Accommodation</span>
+                      <span className="text-gray-600">Base Fee</span>
                       <span className="font-medium text-gray-900">
                         ₦{(selectedAttractions[0].price * numDays).toLocaleString()}
                       </span>
