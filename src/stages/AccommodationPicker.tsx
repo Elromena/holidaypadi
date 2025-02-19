@@ -95,7 +95,7 @@ export function AccommodationPicker({
                 className="flex items-center justify-between w-full group"
               >
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                  Room Preview
+                  Destination Preview
                 </h3>
                 <ChevronRight className={`w-5 h-5 text-gray-400 transition-transform group-hover:text-blue-600
                   ${expandedSections.rooms ? 'rotate-90' : ''}`}
@@ -121,7 +121,7 @@ export function AccommodationPicker({
                 className="flex items-center justify-between w-full group"
               >
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                  Resort Amenities
+                  Destination Amenities
                 </h3>
                 <ChevronRight className={`w-5 h-5 text-gray-400 transition-transform group-hover:text-blue-600
                   ${expandedSections.amenities ? 'rotate-90' : ''}`}
@@ -181,7 +181,7 @@ export function AccommodationPicker({
                 className="flex items-center justify-between w-full group"
               >
                 <h3 className="text-lg font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">
-                  Resort Policies
+                  Destination Policies
                 </h3>
                 <ChevronRight className={`w-5 h-5 text-gray-400 transition-transform group-hover:text-blue-600
                   ${expandedSections.policies ? 'rotate-90' : ''}`}
