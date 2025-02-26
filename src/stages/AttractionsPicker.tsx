@@ -86,9 +86,41 @@ export function AttractionsPicker({ selectedDestination, onBack, onNext }: Attra
         <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-3">
           Choose Your Attractions
         </h1>
-        <p className="text-lg text-gray-500 text-center mb-8 max-w-2xl">
-          Select either one full package or at least three regular attractions
-        </p>
+        <div className="w-full max-w-2xl">
+          <div className="text-center mb-6">
+            <p className="text-lg text-gray-500">
+              Customize your experience by selecting attractions
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-medium text-gray-900">Full Package</h3>
+                <span className="px-2 py-1 bg-purple-50 text-purple-700 text-xs font-medium rounded-full">Premium</span>
+              </div>
+              <p className="text-sm text-gray-500">
+                All-inclusive experience with accommodation and activities
+              </p>
+              <div className="mt-3 text-xs font-medium text-purple-600">
+                Select 1 package
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-xl p-4 border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-medium text-gray-900">Regular Attractions</h3>
+                <span className="px-2 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">Custom</span>
+              </div>
+              <p className="text-sm text-gray-500">
+                Build your own experience with individual attractions
+              </p>
+              <div className="mt-3 text-xs font-medium text-blue-600">
+                Select at least 3 attractions
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="w-full max-w-xl relative">
           <input
             type="text"
@@ -163,12 +195,19 @@ export function AttractionsPicker({ selectedDestination, onBack, onNext }: Attra
           <ArrowLeft className="w-5 h-5" />
           Change Dates
         </button>
-        {isValidSelection && (
+        {(selectedType === 'regular' || isValidSelection) && (
           <button
-            className="bg-blue-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-600 transition-colors shadow-lg hover:shadow-xl flex items-center gap-2"
+            className={`px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl flex items-center gap-2 transition-all ${
+              isValidSelection
+                ? 'bg-blue-500 text-white hover:bg-blue-600'
+                : 'bg-gray-100 text-gray-400 cursor-not-allowed'
+            }`}
             onClick={() => onNext(selectedAttractions)}
+            disabled={!isValidSelection}
           >
-            Select Accommodation
+            {selectedType === 'regular' && !isValidSelection
+              ? `Pick ${3 - selectedAttractions.length} more attraction${selectedAttractions.length === 2 ? '' : 's'}`
+              : 'Select Accommodation'}
             <ArrowRight className="w-5 h-5" />
           </button>
         )}
