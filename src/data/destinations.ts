@@ -10,7 +10,7 @@ export const destinations: Destination[] = [
   {
     id: 'abuja',
     name: 'Abuja',
-    description: 'Experience the cultural heart of Southwest Nigeria with a perfect mix of traditional landmarks and exciting modern attractions.',
+    description: 'Nestled in the heart of Nigeria, Abuja offers visitors a refreshing blend of modernity and tradition from tree-lined boulevards to the striking Aso Rock backdrop.',
     image: 'https://flightpadi.com/wp-content/uploads/zuma-rock-abuja.jpg'
   }
 ];
