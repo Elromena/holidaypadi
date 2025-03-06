@@ -7,10 +7,10 @@ export const destinations: Destination[] = [
     description: 'Experience the cultural heart of Southwest Nigeria with a perfect mix of traditional landmarks and exciting modern attractions.',
     image: 'https://i0.wp.com/oyoaffairs.net/wp-content/uploads/2022/06/img_2752.jpg'
   },
-  {
-    id: 'abuja',
-    name: 'Abuja',
-    description: 'Nestled in the heart of Nigeria, Abuja offers visitors a refreshing blend of modernity and tradition from tree-lined boulevards to the striking Aso Rock backdrop.',
-    image: 'https://flightpadi.com/wp-content/uploads/zuma-rock-abuja.jpg'
-  }
+{
+  id: 'lagos',
+  name: 'Lagos',
+  description: 'As Nigeria\'s vibrant coastal metropolis, Lagos combines bustling markets and innovative tech hubs with stunning waterfront views, creating an energetic blend of tradition and ambition.',
+  image: 'https://flightpadi.com/wp-content/uploads/lagos-nigeria.jpg'
+}
 ];
