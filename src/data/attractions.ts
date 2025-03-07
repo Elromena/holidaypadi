@@ -219,7 +219,7 @@ price: 0
   id: 'water-zorbing',
   name: 'Water Zorbing Adventure',
   description: 'Experience the thrill of walking on water inside a transparent inflatable sphere. This unique activity combines fun, excitement, and laughter as you roll, tumble, and attempt to stay upright on the water surface.',
-  image: 'https://example.com/water-zorbing.jpg',
+  image: 'https://nevsailwatersports.ie/wp-content/uploads/2020/11/Zorbing-5.png',
   type: 'regular',
   destinationId: 'lagos',
   price: 15000
@@ -228,7 +228,7 @@ price: 0
   id: 'nike-art-gallery',
   name: 'Nike Art Gallery',
   description: 'Explore one of West Africa\'s largest art collections featuring over 8,000 diverse Nigerian artworks. Meet local artists and learn about contemporary Nigerian artistic expressions in this stunning architectural space.',
-  image: 'https://example.com/nike-art-gallery.jpg',
+  image: 'https://nikeartfoundation.com/wp-content/uploads/2023/12/nike-art-gallery-lagos.jpg',
   type: 'regular',
   destinationId: 'lagos',
   price: 0
@@ -237,7 +237,7 @@ price: 0
   id: 'lagos-kayaking',
   name: 'Scenic Kayaking Experience',
   description: 'Paddle through the serene waters around Lagos in your own kayak. Enjoy the peaceful surroundings, spot local wildlife, and get a unique perspective of the coastline while getting a great upper-body workout.',
-  image: 'https://example.com/lagos-kayaking.jpg',
+  image: 'https://www.travelstart.com.ng/blog/wp-content/uploads/2017/11/kayaking.jpg',
   type: 'regular',
   destinationId: 'lagos',
   price: 15000
