@@ -225,6 +225,15 @@ price: 0
   price: 15000
 },
 {
+  id: 'nike-art-gallery',
+  name: 'Nike Art Gallery',
+  description: 'Explore one of West Africa\'s largest art collections featuring over 8,000 diverse Nigerian artworks. Meet local artists and learn about contemporary Nigerian artistic expressions in this stunning architectural space.',
+  image: 'https://example.com/nike-art-gallery.jpg',
+  type: 'regular',
+  destinationId: 'lagos',
+  price: 0
+},
+{
   id: 'lagos-kayaking',
   name: 'Scenic Kayaking Experience',
   description: 'Paddle through the serene waters around Lagos in your own kayak. Enjoy the peaceful surroundings, spot local wildlife, and get a unique perspective of the coastline while getting a great upper-body workout.',
