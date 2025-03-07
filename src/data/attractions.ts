@@ -195,7 +195,7 @@ price: 0
   image: 'https://www.ceracerniarthub.com/images/our-services/handinhand.png',
   type: 'regular',
   destinationId: 'lagos',
-  price: 50000
+  price: 35000
 },
 {
   id: 'ceracerni-spin-art',
