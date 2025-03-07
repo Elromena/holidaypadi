@@ -126,9 +126,6 @@ export function SummaryPage({
                   <div>
                     <h3 className="font-medium text-gray-900">Accommodation</h3>
                     <p className="text-gray-600">{selectedHotel.name}</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      ₦{selectedHotel.price.toLocaleString()}/night
-                    </p>
                   </div>
                 </div>
               )}
