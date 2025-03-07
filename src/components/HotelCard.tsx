@@ -70,7 +70,7 @@ export function HotelCard({ hotel, showDetails, onToggleDetails }: HotelCardProp
           </div>
 
           <div>
-            <h4 className="font-semibold text-gray-900 mb-3 text-base">Room Preview</h4>
+            <h4 className="font-semibold text-gray-900 mb-3 text-base">Preview</h4>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
             {hotel.roomImages.map((image, index) => (
               <img
