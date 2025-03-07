@@ -27,7 +27,7 @@ export function AttractionCard({ attraction, isSelected, onSelect, disabled }: A
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-lg font-bold text-white">{attraction.name}</h3>
           <span className="text-white font-medium">
-            ₦{attraction.price.toLocaleString()}
+            {attraction.price === 0 ? 'Free' : `₦${attraction.price.toLocaleString()}`}
           </span>
         </div>
         <p className="text-white/90 text-sm mb-2">{attraction.description}</p>
