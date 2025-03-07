@@ -30,35 +30,32 @@ rating: 5
 },
   // Lagos Hotels
   {
-    id: 'lagos-continental',
-    name: 'Lagos Continental Hotel',
-    description: 'Luxury 5-star hotel in the heart of Victoria Island with panoramic ocean views.',
-    image: 'https://images.unsplash.com/photo-1542314831-068cd1dbfeeb',
+    id: 'rembrandt-lagos',
+    name: 'De Rembrandt Hotel',
+    description: 'Classic 4-star hotel in the heart of Ikeja, just beside the City Mall with breathtaking view of the city.',
+    image: 'https://derembrandthotels.com/wp-content/uploads/2019/02/1-1-1.jpg',
     roomImages: [
-      'https://images.unsplash.com/photo-1618773928121-c32242e63f39',
-      'https://images.unsplash.com/photo-1591088398332-8a7791972843',
-      'https://images.unsplash.com/photo-1590490360182-c33d57733427'
+      'https://derembrandthotels.com/wp-content/uploads/2019/02/Standard-2-1000x550.jpg',
+      'https://derembrandthotels.com/wp-content/uploads/2019/02/Hotel-Image-5.jpg',
+      'https://derembrandthotels.com/wp-content/uploads/2019/02/Hotel-Image-5.jpg',
+      'https://derembrandthotels.com/wp-content/uploads/2019/02/Hotel-Image-7.jpg'
     ],
-    price: 1500,
+    price: 85000,
     destinationId: 'lagos',
-    features: ['Ocean View Rooms', 'Rooftop Pool', 'Spa & Wellness Center', '5 Restaurants', 'Business Center'],
+    features: ['City View Rooms', 'Pool', 'Restaurant and Lounge'],
     rating: 4.8
   },
-  {
-    id: 'eko-hotel',
-    name: 'Eko Hotel & Suites',
-    description: 'Iconic Lagos hotel featuring world-class amenities and exceptional service.',
-    image: 'https://images.unsplash.com/photo-1455587734955-081b22074882',
-    roomImages: [
-      'https://images.unsplash.com/photo-1578683010236-d716f9a3f461',
-      'https://images.unsplash.com/photo-1566665797739-1674de7a421a',
-      'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b'
-    ],
-    price: 1800,
-    destinationId: 'lagos',
-    features: ['Multiple Pools', 'Premium Spa', 'Beach Access', 'Night Club', 'Tennis Courts'],
-    rating: 4.9
-  },
+{
+id: 'self-lagos',
+name: 'I\'ll handle my accommodation',
+description: 'Skip accommodation booking - perfect if you reside in Lagos or have your own arrangements.',
+image: 'https://cf.bstatic.com/static/img/theme-index/bg_placestostay/723e0fca72a9e45222ea74a1df3d79b544d009e0.jpg',
+roomImages: [],
+price: 0,
+destinationId: 'lagos',
+features: ['Choose your location', 'Personal arrangements'],
+rating: 5
+},
 
   // Abuja Hotels
   {
