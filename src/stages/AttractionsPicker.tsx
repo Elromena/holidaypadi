@@ -73,7 +73,7 @@ export function AttractionsPicker({ selectedDestination, onBack, onNext }: Attra
   const isValidSelection = React.useMemo(() => {
     if (selectedAttractions.length === 0) return false;
     if (selectedType === 'full_package') return selectedAttractions.length === 1;
-    return selectedAttractions.length >= 3;
+    return selectedAttractions.length >= 2;
   }, [selectedAttractions, selectedType]);
 
   const totalPrice = React.useMemo(() => {
@@ -116,7 +116,7 @@ export function AttractionsPicker({ selectedDestination, onBack, onNext }: Attra
                 Build your own experience with individual attractions
               </p>
               <div className="mt-3 text-xs font-medium text-blue-600">
-                Select at least 3 attractions
+                Select at least 2 attractions
               </div>
             </div>
           </div>
@@ -206,7 +206,7 @@ export function AttractionsPicker({ selectedDestination, onBack, onNext }: Attra
             disabled={!isValidSelection}
           >
             {selectedType === 'regular' && !isValidSelection
-              ? `Pick ${3 - selectedAttractions.length} more attraction${selectedAttractions.length === 2 ? '' : 's'}`
+              ? `Pick at least ${2 - selectedAttractions.length} more attraction${selectedAttractions.length === 1 ? '' : 's'}`
               : 'Select Accommodation'}
             <ArrowRight className="w-5 h-5" />
           </button>
