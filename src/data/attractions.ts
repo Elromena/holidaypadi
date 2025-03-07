@@ -241,6 +241,33 @@ price: 0
   type: 'regular',
   destinationId: 'lagos',
   price: 15000
+},
+{
+  id: 'lekki-conservation-centre',
+  name: 'Lekki Conservation Centre',
+  description: 'Walk along Africa\'s longest canopy walkway (401m) suspended above the forest floor. Explore this natural oasis within Lagos while spotting monkeys, birds, and other wildlife in their protected habitat. A perfect blend of adventure and ecotourism.',
+  image: 'https://flightpadi.com/wp-content/uploads/2024/09/Longest_Net_Canopy_Walkway_in_Lekki_Conservation_Center._Lagogs._Nigeria.webp',
+  type: 'regular',
+  destinationId: 'lagos',
+  price: 7500
+},
+{
+  id: 'rufus-and-bee',
+  name: 'Rufus and Bee Arcade Experience',
+  description: 'Dive into Lagos\' premium gaming and entertainment center featuring state-of-the-art arcade games, bowling, virtual reality experiences, and more. Perfect for friends and family looking for indoor fun and friendly competition.',
+  image: 'https://flightpadi.com/wp-content/uploads/rufus-and-bee.webp',
+  type: 'regular',
+  destinationId: 'lagos',
+  price: 20000
+},
+{
+  id: 'badagry-heritage-museum',
+  name: 'Badagry Heritage Museum',
+  description: 'Explore Nigeria\'s powerful history at this significant museum showcasing artifacts and exhibitions on the transatlantic slave trade and local cultural heritage.',
+  image: 'https://flightpadi.com/wp-content/uploads/badagry-heritage-museum-1267x1536.jpg',
+  type: 'regular',
+  destinationId: 'lagos',
+  price: 10000
 }
   // add new data before this and always add a comma immediately after the last closed bracket before adding new data
 ];
