@@ -37,7 +37,6 @@ rating: 5
     roomImages: [
       'https://derembrandthotels.com/wp-content/uploads/2019/02/Standard-2-1000x550.jpg',
       'https://derembrandthotels.com/wp-content/uploads/2019/02/Hotel-Image-5.jpg',
-      'https://derembrandthotels.com/wp-content/uploads/2019/02/Hotel-Image-5.jpg',
       'https://derembrandthotels.com/wp-content/uploads/2019/02/Hotel-Image-7.jpg'
     ],
     price: 85000,
