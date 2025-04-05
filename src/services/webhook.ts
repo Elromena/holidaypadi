@@ -1,4 +1,4 @@
-const MAKE_WEBHOOK_URL = 'https://hook.eu2.make.com/drp96i2u5dwfghmj06mpiyseaouak47o';
+const MAKE_WEBHOOK_URL = 'https://hook.eu2.make.com/lmfioe0m1t26fjg2ih52cxcsnndps6ro';
 
 interface WebhookPayload {
   transaction?: {
