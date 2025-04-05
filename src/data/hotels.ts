@@ -29,6 +29,21 @@ features: ['Choose your location', 'Personal arrangements'],
 rating: 5
 },
   // Lagos Hotels
+     {
+    id: 'tillz-lagos',
+    name: 'Tillz Hotels',
+    description: 'Strategically located in the heart of the city with close proximity to some of the best beaches and attraction in Lagos.',
+    image: 'https://images.trvl-media.com/lodging/65000000/64670000/64665900/64665834/830344ca.jpg?impolicy=resizecrop&rw=1200&ra=fit',
+    roomImages: [
+      'https://images.trvl-media.com/lodging/65000000/64670000/64665900/64665834/aee730ba.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium',
+      'https://images.trvl-media.com/lodging/65000000/64670000/64665900/64665834/e952e37c.jpg?impolicy=fcrop&w=1200&h=800&p=1&q=medium',
+      'https://images.trvl-media.com/lodging/65000000/64670000/64665900/64665834/a7074a8a.jpg?impolicy=resizecrop&rw=1200&ra=fit'
+    ],
+    price: 50000,
+    destinationId: 'lagos',
+    features: ['City View Rooms', 'Pool', 'Restaurant and Lounge'],
+    rating: 4.8
+  },
   {
     id: 'rembrandt-lagos',
     name: 'De Rembrandt Hotel',
@@ -39,7 +54,7 @@ rating: 5
       'https://derembrandthotels.com/wp-content/uploads/2019/02/Hotel-Image-5.jpg',
       'https://derembrandthotels.com/wp-content/uploads/2019/02/Hotel-Image-7.jpg'
     ],
-    price: 85000,
+    price: 105000,
     destinationId: 'lagos',
     features: ['City View Rooms', 'Pool', 'Restaurant and Lounge'],
     rating: 4.8
