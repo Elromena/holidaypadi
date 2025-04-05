@@ -44,7 +44,7 @@ export function useFlutterwave() {
         phonenumber: customerPhone,
       },
       customizations: {
-        title: 'Nigerian Adventures',
+        title: 'Flightpadi Holiday',
         description: 'Your Dream Vacation Package',
         logo: 'https://images.unsplash.com/photo-1589308454676-22a0e7e1f58f',
       },
