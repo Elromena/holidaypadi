@@ -1,5 +1,7 @@
 import React from 'react';
 import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import type { DateRange } from 'react-day-picker';
 import type { Attraction, Hotel } from './types';
 import { DestinationPicker } from './stages/DestinationPicker';
@@ -203,14 +205,20 @@ function BookingFlow() {
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Navigate to="/book" replace />} />
-      <Route path="/book" element={<BookingFlow />} />
-      <Route path="/payment/success" element={<PaymentSuccessPage />} />
-      <Route path="/payment/failed" element={<PaymentFailedPage />} />
-      <Route path="/payment/cancelled" element={<PaymentCancelledPage />} />
-      <Route path="*" element={<Navigate to="/book" replace />} />
-    </Routes>
+    <>
+      <Header />
+      <main>
+        <Routes>
+          <Route path="/" element={<Navigate to="/book" replace />} />
+          <Route path="/book" element={<BookingFlow />} />
+          <Route path="/payment/success" element={<PaymentSuccessPage />} />
+          <Route path="/payment/failed" element={<PaymentFailedPage />} />
+          <Route path="/payment/cancelled" element={<PaymentCancelledPage />} />
+          <Route path="*" element={<Navigate to="/book" replace />} />
+        </Routes>
+      </main>
+      <Footer />
+    </>
   );
 }
 
