@@ -4,7 +4,7 @@ import { MapPin, Calendar, Users, Hotel, Palmtree, CreditCard } from 'lucide-rea
 import type { Attraction, Hotel as HotelType, TravellerInfo } from '../types';
 import { destinations } from '../data/destinations';
 
-const CURATION_FEE = 100000;
+const CURATION_FEE = 98350;
 
 interface SummaryPageProps {
   selectedDestination: string;
@@ -204,7 +204,7 @@ export function SummaryPage({
               )}
 
               <div className="flex justify-between pt-3 border-t">
-                <span className="text-gray-600">Trip Curation</span>
+                <span className="text-gray-600">Taxes & Service Charge</span>
                 <span className="font-medium text-gray-900">
                   ₦{CURATION_FEE.toLocaleString()}
                 </span>
