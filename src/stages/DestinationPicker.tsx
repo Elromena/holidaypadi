@@ -28,7 +28,7 @@ export function DestinationPicker({ selectedDestination, onSelect, onNext }: Des
     <div className="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8">
       <div className="flex flex-col items-center mb-12">
         <h1 className="text-2xl sm:text-3xl font-semibold text-gray-900 mb-3">
-          Plan Your Nigerian Adventure
+          Your Next Vacation is Three Clicks Away
         </h1>
         <p className="text-lg text-gray-500 text-center mb-8 max-w-2xl">
           Choose your destination and start planning your unforgettable journey
@@ -36,7 +36,7 @@ export function DestinationPicker({ selectedDestination, onSelect, onNext }: Des
         <div className="w-full max-w-xl relative">
           <input
             type="text"
-            placeholder="Search destinations, activities, or landmarks..."
+            placeholder="Search cities..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             className="w-full px-4 py-3 pl-12 rounded-xl border border-gray-200 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 transition-all outline-none"
