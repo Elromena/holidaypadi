@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
 import { hotels } from '../data/hotels';
 import { attractions } from '../data/attractions';
 import { HotelCard } from '../components/HotelCard';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 import type { Hotel } from '../types';
 
 interface AccommodationPickerProps {
@@ -34,6 +35,8 @@ export function AccommodationPicker({
   const [selectedHotel, setSelectedHotel] = React.useState<Hotel | null>(null);
   const [showDetails, setShowDetails] = React.useState(false);
   const [showOptions, setShowOptions] = React.useState(false);
+
+  useScrollToTop(null);
 
   const destinationHotels = React.useMemo(() => {
     return hotels.filter(hotel => hotel.destinationId === selectedDestination);
