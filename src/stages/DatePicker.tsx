@@ -2,6 +2,7 @@ import React from 'react';
 import { Calendar, ArrowLeft, ArrowRight } from 'lucide-react';
 import { DateRange } from 'react-day-picker';
 import { destinations } from '../data/destinations';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 import { DateRangePicker } from '../components/DateRangePicker';
 
 interface DatePickerProps {
@@ -14,6 +15,8 @@ interface DatePickerProps {
 
 export function DatePicker({ selectedDestination, dateRange, onDateSelect, onBack, onNext }: DatePickerProps) {
   const destination = destinations.find(d => d.id === selectedDestination);
+
+  useScrollToTop(null);
 
   if (!destination) return null;
 
