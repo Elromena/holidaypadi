@@ -3,12 +3,15 @@ import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { ArrowRight, Plane, MapPin, Calendar, Mail } from 'lucide-react';
 import Lottie from 'lottie-react';
 import successAnimation from '../assets/success-animation.json';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 
 export function PaymentSuccessPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const transactionDetails = location.state;
   const [showConfetti, setShowConfetti] = React.useState(false);
+
+  useScrollToTop(null);
   
   useEffect(() => {
     // Prevent direct access to success page
