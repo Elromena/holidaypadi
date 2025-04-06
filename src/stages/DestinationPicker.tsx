@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin, Search, ArrowRight } from 'lucide-react';
 import { destinations } from '../data/destinations';
 import { DestinationCard } from '../components/DestinationCard';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 
 interface DestinationPickerProps {
   selectedDestination: string | null;
@@ -12,6 +13,8 @@ interface DestinationPickerProps {
 export function DestinationPicker({ selectedDestination, onSelect, onNext }: DestinationPickerProps) {
   const [expandedDestination, setExpandedDestination] = React.useState<string | null>(null);
   const [searchQuery, setSearchQuery] = React.useState('');
+
+  useScrollToTop(null);
 
   const filteredDestinations = React.useMemo(() => {
     const query = searchQuery.toLowerCase();
