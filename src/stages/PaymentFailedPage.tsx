@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { XCircle, RefreshCw, ArrowLeft } from 'lucide-react';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 
 export function PaymentFailedPage() {
   const location = useLocation();
   const navigate = useNavigate();
   const error = location.state?.error || 'We couldn\'t process your payment';
+
+  useScrollToTop(null);
 
   useEffect(() => {
     // Log the error for debugging
