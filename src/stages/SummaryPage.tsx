@@ -3,6 +3,7 @@ import { differenceInDays } from 'date-fns';
 import { MapPin, Calendar, Users, Hotel, Palmtree, CreditCard } from 'lucide-react';
 import type { Attraction, Hotel as HotelType, TravellerInfo } from '../types';
 import { destinations } from '../data/destinations';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 
 const CURATION_FEE = 98350;
 
@@ -28,6 +29,8 @@ export function SummaryPage({
   const destination = destinations.find(d => d.id === selectedDestination);
   const numDays = differenceInDays(dateRange.to, dateRange.from);
   const isFullPackage = selectedAttractions[0]?.type === 'full_package';
+
+  useScrollToTop(null);
 
   const calculateTotal = React.useMemo(() => {
     if (isFullPackage) {
