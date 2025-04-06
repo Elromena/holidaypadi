@@ -4,6 +4,7 @@ import type { TravellerInfo, TravelPartySize } from '../types';
 import { destinations } from '../data/destinations';
 import { attractions } from '../data/attractions';
 import { hotels } from '../data/hotels';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 import { sendWebhook } from '../services/webhook';
 
 const STATES = [
@@ -41,6 +42,8 @@ export function BioDataCollector({
     originCity: '',
     wantsTransportQuote: false
   });
+
+  useScrollToTop(null);
 
   const [errors, setErrors] = React.useState<Partial<Record<keyof TravellerInfo, string>>>({});
   const destination = destinations.find(d => d.id === selectedDestination);
