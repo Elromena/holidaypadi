@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin, Search, ArrowLeft, ArrowRight } from 'lucide-react';
 import { attractions } from '../data/attractions';
 import { AttractionCard } from '../components/AttractionCard';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 import type { Attraction, AttractionType } from '../types';
 
 interface AttractionsPickerProps {
@@ -15,6 +16,8 @@ export function AttractionsPicker({ selectedDestination, onBack, onNext }: Attra
   const [searchQuery, setSearchQuery] = React.useState('');
   const [typeFilter, setTypeFilter] = React.useState<AttractionType | 'all'>('all');
   const [error, setError] = React.useState<string | null>(null);
+
+  useScrollToTop(null);
 
   const destinationAttractions = React.useMemo(() => {
     return attractions.filter(attraction => attraction.destinationId === selectedDestination);
