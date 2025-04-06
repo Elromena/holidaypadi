@@ -1,9 +1,12 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { AlertCircle, ArrowLeft } from 'lucide-react';
+import { useScrollToTop } from '../hooks/useScrollToTop';
 
 export function PaymentCancelledPage() {
   const navigate = useNavigate();
+
+  useScrollToTop(null);
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
