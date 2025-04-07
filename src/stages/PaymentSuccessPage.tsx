@@ -3,6 +3,7 @@ import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { ArrowRight, Plane, MapPin, Calendar, Mail } from 'lucide-react';
 import Lottie from 'lottie-react';
 import successAnimation from '../assets/success-animation.json';
+import Footer from '../components/Footer';
 import { useScrollToTop } from '../hooks/useScrollToTop';
 
 export function PaymentSuccessPage() {
@@ -37,8 +38,9 @@ export function PaymentSuccessPage() {
   if (!transactionDetails?.verified) return null;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex items-center justify-center p-4">
-      <div className="max-w-2xl w-full">
+    <>
+      <div className="min-h-screen bg-gradient-to-b from-blue-50 to-white flex items-center justify-center p-4">
+        <div className="max-w-2xl w-full">
         {/* Success Animation */}
         <div className="relative">
           <div className="w-40 h-40 mx-auto">
@@ -120,7 +122,9 @@ export function PaymentSuccessPage() {
             </div>
           </div>
         </div>
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }
