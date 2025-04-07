@@ -94,8 +94,8 @@ price: 6000
     price: 150000,
     accommodation: {
       roomImages: [
-        'https://nwaanyiije.com/wp-content/uploads/2022/01/E2B79A5F-8097-4373-8B9D-D8D8079D6974-768x432.jpeg',
-        'https://hospitality.iita.org/wp-content/uploads/2019/06/IMG_7880-scaled.jpeg',
+        'https://flightpadi.com/wp-content/uploads/iita-compound.jpg',
+        'https://flightpadi.com/wp-content/uploads/iita-golf-course-2.jpg',
         'https://hospitality.iita.org/wp-content/uploads/elementor/thumbs/DSC_8440-q98c1xodar2tfttmfucswux6iceb3u37qtnsgj3sm8.jpg'
       ],
       amenities: [
