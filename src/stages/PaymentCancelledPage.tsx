@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { AlertCircle, ArrowLeft } from 'lucide-react';
-import Footer from '../components/Footer';
 import { useScrollToTop } from '../hooks/useScrollToTop';
 
 export function PaymentCancelledPage() {
@@ -44,7 +43,6 @@ export function PaymentCancelledPage() {
         </div>
       </div>
     </div>
-    <Footer />
     </>
   );
 }
