@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { AlertCircle, ArrowLeft } from 'lucide-react';
+import Footer from '../components/Footer';
 import { useScrollToTop } from '../hooks/useScrollToTop';
 
 export function PaymentCancelledPage() {
@@ -9,6 +10,7 @@ export function PaymentCancelledPage() {
   useScrollToTop(null);
 
   return (
+    <>
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-lg p-6 text-center">
         <div className="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -42,5 +44,7 @@ export function PaymentCancelledPage() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
