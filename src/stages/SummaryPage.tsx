@@ -4,8 +4,7 @@ import { MapPin, Calendar, Users, Hotel, Palmtree, CreditCard } from 'lucide-rea
 import type { Attraction, Hotel as HotelType, TravellerInfo } from '../types';
 import { destinations } from '../data/destinations';
 import { useScrollToTop } from '../hooks/useScrollToTop';
-
-const CURATION_FEE = 98350;
+import { PRICING } from '../config/pricing';
 
 interface SummaryPageProps {
   selectedDestination: string;
@@ -49,13 +48,13 @@ export function SummaryPage({
       const partyMultiplier = travellerInfo.partySize === 'couple' ? 2 : 1;
       const total = accommodationTotal + (activitiesTotal * partyMultiplier);
 
-      return total + CURATION_FEE;
+      return total + PRICING.CURATION_FEE;
     }
 
     const multiplier = travellerInfo.partySize === 'couple' ? 2 : 1;
     const attractionsTotal = selectedAttractions.reduce((sum, attr) => sum + attr.price, 0) * multiplier;
     const accommodationTotal = selectedHotel.price * numDays;
-    return attractionsTotal + accommodationTotal + CURATION_FEE;
+    return attractionsTotal + accommodationTotal + PRICING.CURATION_FEE;
   }, [selectedAttractions, selectedHotel, numDays, travellerInfo.partySize, isFullPackage]);
 
   if (!destination) return null;
@@ -209,7 +208,7 @@ export function SummaryPage({
               <div className="flex justify-between pt-3 border-t">
                 <span className="text-gray-600">Taxes & Service Charge</span>
                 <span className="font-medium text-gray-900">
-                  ₦{CURATION_FEE.toLocaleString()}
+                  ₦{PRICING.CURATION_FEE.toLocaleString()}
                 </span>
               </div>
 
