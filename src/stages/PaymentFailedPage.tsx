@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { XCircle, RefreshCw, ArrowLeft } from 'lucide-react';
+import Footer from '../components/Footer';
 import { useScrollToTop } from '../hooks/useScrollToTop';
 
 export function PaymentFailedPage() {
@@ -18,6 +19,7 @@ export function PaymentFailedPage() {
   }, [location.state]);
 
   return (
+    <>
     <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
       <div className="max-w-md w-full bg-white rounded-2xl shadow-lg p-6 text-center">
         <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -52,5 +54,7 @@ export function PaymentFailedPage() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 }
