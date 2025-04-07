@@ -4,6 +4,7 @@ import type { TravellerInfo, TravelPartySize } from '../types';
 import { destinations } from '../data/destinations';
 import { attractions } from '../data/attractions';
 import { hotels } from '../data/hotels';
+import { PRICING } from '../config/pricing';
 import { useScrollToTop } from '../hooks/useScrollToTop';
 import { sendWebhook } from '../services/webhook';
 
@@ -128,13 +129,13 @@ export function BioDataCollector({
           pricing: {
             subtotal: selectedAttractions.reduce((sum, attr) => sum + attr.price, 0) +
               (selectedHotel ? selectedHotel.price * (duration || 0) : 0),
-            curationFee: 500,
+            curationFee: PRICING.CURATION_FEE,
             total: selectedAttractions.reduce((sum, attr) => sum + attr.price, 0) +
-              (selectedHotel ? selectedHotel.price * (duration || 0) : 0) + 500,
+              (selectedHotel ? selectedHotel.price * (duration || 0) : 0) + PRICING.CURATION_FEE,
             breakdown: {
               attractions: selectedAttractions.reduce((sum, attr) => sum + attr.price, 0),
               accommodation: selectedHotel ? selectedHotel.price * (duration || 0) : 0,
-              fees: 500,
+              fees: PRICING.CURATION_FEE,
             },
           },
           stage: 'bio_completed',
