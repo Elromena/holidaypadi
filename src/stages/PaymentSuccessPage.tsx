@@ -3,7 +3,6 @@ import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { ArrowRight, Plane, MapPin, Calendar, Mail } from 'lucide-react';
 import Lottie from 'lottie-react';
 import successAnimation from '../assets/success-animation.json';
-import Footer from '../components/Footer';
 import { useScrollToTop } from '../hooks/useScrollToTop';
 
 export function PaymentSuccessPage() {
@@ -124,7 +123,6 @@ export function PaymentSuccessPage() {
         </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
