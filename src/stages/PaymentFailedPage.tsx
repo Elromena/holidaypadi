@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { XCircle, RefreshCw, ArrowLeft } from 'lucide-react';
-import Footer from '../components/Footer';
 import { useScrollToTop } from '../hooks/useScrollToTop';
 
 export function PaymentFailedPage() {
@@ -54,7 +53,6 @@ export function PaymentFailedPage() {
         </div>
       </div>
     </div>
-    <Footer />
     </>
   );
 }
