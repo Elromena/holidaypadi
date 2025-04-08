@@ -1,8 +1,10 @@
 const MAKE_WEBHOOK_URL = 'https://hook.eu2.make.com/lmfioe0m1t26fjg2ih52cxcsnndps6ro';
 
 interface WebhookPayload {
+  bookingId: string;
   transaction?: {
     amount: number;
+    id: string;
     currency: string;
     status: string;
     reference: string;
@@ -60,6 +62,11 @@ interface WebhookPayload {
 
 export async function sendWebhook(payload: WebhookPayload) {
   try {
+    // Ensure bookingId is present
+    if (!payload.bookingId) {
+      throw new Error('Booking ID is required');
+    }
+
     const response = await fetch(MAKE_WEBHOOK_URL, {
       method: 'POST',
       headers: {
