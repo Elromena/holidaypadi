@@ -2,6 +2,7 @@ import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { FlutterwaveConfig } from 'flutterwave-react-v3';
 import { sendWebhook } from '../services/webhook';
+import { generateBookingId } from '../utils/bookingId';
 
 interface PaymentConfig {
   amount: number;
@@ -15,6 +16,7 @@ export function useFlutterwave() {
   const navigate = useNavigate();
   const [isProcessing, setIsProcessing] = React.useState(false);
   const [txRef, setTxRef] = React.useState<string>('');
+  const [bookingId] = React.useState(() => generateBookingId());
 
   // Clean up Flutterwave iframe on unmount
   React.useEffect(() => {
@@ -57,6 +59,7 @@ export function useFlutterwave() {
           if (response.status === 'successful') {
             // Send webhook for successful payment
             await sendWebhook({
+              bookingId,
               transaction: {
                 amount: response.amount,
                 currency: response.currency,
@@ -83,6 +86,7 @@ export function useFlutterwave() {
             
             // Send webhook for failed payment
             await sendWebhook({
+              bookingId,
               transaction: {
                 amount: response.amount,
                 currency: response.currency,
