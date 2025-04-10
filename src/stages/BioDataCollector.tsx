@@ -7,7 +7,6 @@ import { hotels } from '../data/hotels';
 import { PRICING } from '../config/pricing';
 import { useScrollToTop } from '../hooks/useScrollToTop';
 import { sendWebhook } from '../services/webhook';
-import { generateBookingId } from '../utils/bookingId';
 
 const STATES = [
   'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra', 'Bauchi', 'Bayelsa', 'Benue', 'Borno',
@@ -22,6 +21,7 @@ interface BioDataCollectorProps {
   selectedAttractions: Attraction[];
   selectedHotel: Hotel | null;
   dateRange: DateRange | undefined;
+  bookingId: string;
   onBack: () => void;
   onNext: (info: TravellerInfo) => void;
 }
@@ -31,6 +31,7 @@ export function BioDataCollector({
   selectedAttractions,
   selectedHotel,
   dateRange,
+  bookingId,
   onBack,
   onNext
 }: BioDataCollectorProps) {
@@ -84,7 +85,6 @@ export function BioDataCollector({
         if (!destination) return;
 
         const packageType = selectedAttractions[0]?.type || 'regular';
-        const bookingId = generateBookingId();
         const duration = dateRange?.from && dateRange?.to
           ? Math.ceil((dateRange.to.getTime() - dateRange.from.getTime()) / (1000 * 60 * 60 * 24))
           : undefined;
