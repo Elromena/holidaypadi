@@ -12,6 +12,7 @@ interface SummaryPageProps {
   selectedAttractions: Attraction[];
   selectedHotel: HotelType;
   travellerInfo: TravellerInfo;
+  bookingId: string;
   onBack: () => void;
   onNext: (amount: number) => void;
 }
@@ -22,6 +23,7 @@ export function SummaryPage({
   selectedAttractions,
   selectedHotel,
   travellerInfo,
+  bookingId,
   onBack,
   onNext,
 }: SummaryPageProps) {
