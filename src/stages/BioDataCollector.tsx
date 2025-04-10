@@ -3,10 +3,11 @@ import { ArrowLeft, ArrowRight, Phone } from 'lucide-react';
 import type { TravellerInfo, TravelPartySize } from '../types';
 import { destinations } from '../data/destinations';
 import { attractions } from '../data/attractions';
-import { hotels } from '../data/hotels';
 import { PRICING } from '../config/pricing';
 import { useScrollToTop } from '../hooks/useScrollToTop';
 import { sendWebhook } from '../services/webhook';
+import type { DateRange } from 'react-day-picker';
+import type { Hotel } from '../types';
 
 const STATES = [
   'Abia', 'Adamawa', 'Akwa Ibom', 'Anambra', 'Bauchi', 'Bayelsa', 'Benue', 'Borno',
