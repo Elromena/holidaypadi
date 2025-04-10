@@ -31,7 +31,7 @@ export function DestinationPicker({ selectedDestination, onSelect, onNext }: Des
           Your Next Vacation is Three Clicks Away
         </h1>
         <p className="text-lg text-gray-500 text-center mb-8 max-w-2xl">
-          Choose your destination and start planning your unforgettable journey
+          Choose your destination and start planning your getaway
         </p>
         <div className="w-full max-w-xl relative">
           <input
