@@ -2,10 +2,12 @@ import React, { useEffect } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import { XCircle, RefreshCw, ArrowLeft } from 'lucide-react';
 import { useScrollToTop } from '../hooks/useScrollToTop';
+import { useBookingState } from '../hooks/useBookingState';
 
 export function PaymentFailedPage() {
   const location = useLocation();
   const navigate = useNavigate();
+  const { clearBookingState } = useBookingState();
   const error = location.state?.error || 'We couldn\'t process your payment';
 
   useScrollToTop(null);
@@ -44,7 +46,7 @@ export function PaymentFailedPage() {
           
           <Link
             to="/book"
-            onClick={() => sessionStorage.removeItem('bookingState')}
+            onClick={clearBookingState}
             className="inline-flex items-center justify-center gap-2 w-full text-gray-600 hover:text-gray-900 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
