@@ -16,7 +16,10 @@ export function PaymentSuccessPage() {
   useEffect(() => {
     // Prevent direct access to success page
     if (!transactionDetails?.verified) {
-      navigate('/book', { replace: true });
+      navigate('/book', { 
+        replace: true,
+        state: { stage: 'summary' } 
+      });
       return;
     }
     
@@ -30,7 +33,8 @@ export function PaymentSuccessPage() {
     console.log('Successful transaction:', {
       transactionId: transactionDetails.transactionId,
       amount: transactionDetails.amount,
-      customerEmail: transactionDetails.customerEmail
+      customerEmail: transactionDetails.customerEmail,
+      verified: transactionDetails.verified
     });
   }, [transactionDetails, navigate]);
 
