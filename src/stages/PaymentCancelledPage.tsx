@@ -2,11 +2,9 @@ import React from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { AlertCircle, ArrowLeft } from 'lucide-react';
 import { useScrollToTop } from '../hooks/useScrollToTop';
-import { useBookingState } from '../hooks/useBookingState';
 
 export function PaymentCancelledPage() {
   const navigate = useNavigate();
-  const { clearBookingState } = useBookingState();
 
   useScrollToTop(null);
 
@@ -36,7 +34,7 @@ export function PaymentCancelledPage() {
           
           <Link
             to="/book"
-            onClick={clearBookingState}
+            onClick={() => sessionStorage.removeItem('bookingState')}
             className="inline-flex items-center justify-center gap-2 w-full text-gray-600 hover:text-gray-900 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
