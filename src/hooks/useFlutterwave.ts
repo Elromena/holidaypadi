@@ -2,7 +2,6 @@ import React, { useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { FlutterwaveConfig } from 'flutterwave-react-v3';
 import { sendWebhook } from '../services/webhook';
-import { generateBookingId } from '../utils/bookingId';
 
 interface PaymentConfig {
   amount: number;
@@ -54,16 +53,17 @@ export function useFlutterwave() {
       callback: async (response) => {
         console.log('Payment callback:', response);
         setIsProcessing(true);
+        const paymentStatus = response.status.toLowerCase();
 
         try {
-          if (response.status === 'successful') {
+          if (paymentStatus === 'successful') {
             // Send webhook for successful payment
             await sendWebhook({
               bookingId: paymentConfig.bookingId,
               transaction: {
                 amount: response.amount,
                 currency: response.currency,
-                status: response.status,
+                status: paymentStatus,
                 reference: response.tx_ref,
                 timestamp: new Date().toISOString(),
               },
@@ -82,7 +82,8 @@ export function useFlutterwave() {
               }
             });
           } else {
-            console.error('Payment failed:', response);
+            const errorMessage = response.message || 'Payment was not successful';
+            console.error('Payment failed:', errorMessage);
             
             // Send webhook for failed payment
             await sendWebhook({
@@ -101,26 +102,32 @@ export function useFlutterwave() {
 
             navigate('/payment/failed', { 
               replace: true,
-              state: { error: 'Payment was not successful' }
+              state: { error: errorMessage }
             });
           }
         } catch (error) {
           console.error('Payment processing error:', error);
           navigate('/payment/failed', { 
             replace: true,
-            state: { error: 'An error occurred while processing payment' }
+            state: { error: error instanceof Error ? error.message : 'An error occurred while processing payment' }
           });
         } finally {
           setIsProcessing(false);
           // @ts-ignore - FlutterWave types are not up to date
-          window.FlutterwaveCheckout?.close();
+          if (window.FlutterwaveCheckout?.close) {
+            window.FlutterwaveCheckout.close();
+          }
         }
       },
       onclose: () => {
         console.log('Payment modal closed');
         
         if (!isProcessing) {
-          navigate('/payment/cancelled', { replace: true });
+          // Only navigate if not already processing a payment
+          navigate('/payment/cancelled', { 
+            replace: true,
+            state: { returnToSummary: true }
+          });
         }
       }
     };
