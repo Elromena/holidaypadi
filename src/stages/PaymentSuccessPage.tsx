@@ -4,12 +4,10 @@ import { ArrowRight, Plane, MapPin, Calendar, Mail } from 'lucide-react';
 import Lottie from 'lottie-react';
 import successAnimation from '../assets/success-animation.json';
 import { useScrollToTop } from '../hooks/useScrollToTop';
-import { useBookingState } from '../hooks/useBookingState';
 
 export function PaymentSuccessPage() {
   const location = useLocation();
   const navigate = useNavigate();
-  const { clearBookingState } = useBookingState();
   const transactionDetails = location.state;
   const [showConfetti, setShowConfetti] = React.useState(false);
 
@@ -22,8 +20,8 @@ export function PaymentSuccessPage() {
       return;
     }
     
-    // Clear booking state
-    clearBookingState();
+    // Clear booking state on successful payment
+    sessionStorage.removeItem('bookingState');
 
     // Trigger confetti animation after a short delay
     setTimeout(() => setShowConfetti(true), 500);
