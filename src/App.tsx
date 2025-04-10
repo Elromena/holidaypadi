@@ -29,6 +29,7 @@ function BookingFlow() {
     selectedAttractions,
     selectedHotel,
     travellerInfo,
+    bookingId,
     stage,
     updateState
   } = useBookingState();
@@ -91,6 +92,7 @@ function BookingFlow() {
           selectedAttractions={selectedAttractions}
           selectedHotel={selectedHotel}
           dateRange={dateRange}
+          bookingId={bookingId}
           onBack={() => updateState({ stage: 'accommodation' })}
           onNext={(info) => {
             updateState({
@@ -106,10 +108,12 @@ function BookingFlow() {
           selectedAttractions={selectedAttractions}
           selectedHotel={selectedHotel!}
           travellerInfo={travellerInfo}
+          bookingId={bookingId}
           onBack={() => updateState({ stage: 'bio' })}
           onNext={(amount) => {
             // Send webhook for payment initiation
             sendWebhook({
+              bookingId,
               customer: {
                 firstName: travellerInfo.firstName,
                 lastName: travellerInfo.lastName,
