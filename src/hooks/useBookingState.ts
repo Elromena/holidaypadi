@@ -8,7 +8,6 @@ interface BookingState {
   selectedAttractions: Attraction[];
   selectedHotel: Hotel | null;
   travellerInfo: TravellerInfo | null;
-  bookingId: string;
   stage: 'destination' | 'dates' | 'attractions' | 'accommodation' | 'bio' | 'summary';
 }
 
@@ -32,7 +31,6 @@ export function useBookingState() {
       selectedAttractions: [],
       selectedHotel: null,
       travellerInfo: null,
-      bookingId: generateBookingId(),
       stage: 'destination'
     };
   });
@@ -49,7 +47,6 @@ export function useBookingState() {
       selectedAttractions: [],
       selectedHotel: null,
       travellerInfo: null,
-      bookingId: generateBookingId(),
       stage: 'destination'
     });
   };
